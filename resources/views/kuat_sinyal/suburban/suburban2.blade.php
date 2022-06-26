@@ -19,28 +19,25 @@
    <script src="https://unpkg.com/esri-leaflet@3.0.8/dist/esri-leaflet.js"
     integrity="sha512-E0DKVahIg0p1UHR2Kf9NX7x7TUewJb30mxkxEm2qOYTVJObgsAGpEol9F6iK6oefCbkJiA4/i6fnTHzM6H1kEA=="
     crossorigin=""></script>
+    <link href="{{ asset('css/map.css') }}" rel="stylesheet">
 </head>
 <body>
-<p>
-<center> <div class="container px-4">
-<div class="row gx-5">
-<div class="col">
-<div class="grid-tombol">
-                <form method="GET" action="{{ route('pathloss.suburban.bts') }}">
-                <p>Untuk mengihtung Pathloss, tekan tombol dibawah!</p>
-                    <input type="submit" class="btn btn-success btn-block"  name="model" value="Pathloss"/>
-</form>
+<body>
+    <div class="container-map">
+        <div id="map"></div>
+        <div class="card card-map">
+            <div class="card-body">
+                <h1 class="h5 fw-bold">
+                    Peta kekuatan sinyal di <br /> daerah Jl. Babatan Pantai Ut. No.18, Kalijudan, <br /> Kec. Mulyorejo, Kota SBY
+                </h1>
+                <form method="GET" action="{{ route('pathloss.suburban.bts')}}">
+                    <p>Untuk menghitung Pathloss, tekan tombol dibawah!</p>
+                    <input type="submit" class="btn btn-success"  name="model" value="Hitung Pathloss"/>
+                </form>
+            </div>
+        </div>
     </div>
-</div>
-</div>
-</div>
-</center>
-</p>
-<style>
-        #map { height: 600px; }
-        </style>
-<div id="map"></div> 
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 <script>
     var map = L.map('map').setView([-7.252789356267445, 112.79087076697697], 16);

@@ -6,8 +6,10 @@ Pathloss | Suburban
 @endsection
 
 @section('content')
-   <center> <h3>Masukkan Data Yang akan</h3> </center> 
-    <div>
+<div class="container w-50">
+    <div class="card px-3">
+        <h3 class="text-center">Masukkan Data Yang akan</h3>
+        <div>
         <div class="card bg-light">
             <div class="card-header text-center">Detil BTS</div>
             <div class="card-body">
@@ -99,4 +101,6 @@ Pathloss | Suburban
             </form>
         </div>
     </div>
+    </div>
+</div>
 @endsection
